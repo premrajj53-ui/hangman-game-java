@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String [] args){
+        //JAVA HANGMAN GAME PROJECT
 
         String filepath ="\\Users\\premr\\OneDrive\\Desktop\\learning _java\\hangman game\\words.txt ";
         ArrayList<String> words = new ArrayList<>();
@@ -31,9 +32,9 @@ public class Main {
 
         String word = words.get(random.nextInt(words.size()));
 
-        System.out.println(word);
 
-        /*
+
+
         Scanner sc = new Scanner(System.in);
         ArrayList<Character> WordState = new ArrayList<>();
         int wrongGuess = 0 ;
@@ -63,6 +64,7 @@ for (int i=0; i <word.length(); i++)
                    System.out.println(getHangman(wrongGuess));
                    System.out.println("you win");
                    System.out.println( "the word was"+word);
+                   break;
                }
            }
            else {
@@ -72,7 +74,7 @@ for (int i=0; i <word.length(); i++)
            }
            if (wrongGuess>=6){
                System.out.println("Game Over! wrong guesses");
-               System.out.println( "the word was "+word);
+               System.out.println( "the word was :"+word);
                break;
            }
        }
@@ -110,6 +112,6 @@ sc.close();
                     / \\
                     """;
             default ->  "" ;
-        };*/
+        };
     }
 }
