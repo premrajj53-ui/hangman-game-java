@@ -10,7 +10,7 @@ public class Main {
     public static void main(String [] args){
         //JAVA HANGMAN GAME PROJECT
 
-        String filepath ="\\Users\\premr\\OneDrive\\Desktop\\learning _java\\hangman game\\words.txt ";
+        String filepath ="words.txt";
         ArrayList<String> words = new ArrayList<>();
         try(   BufferedReader reader = new BufferedReader(new FileReader(filepath));) {
             String line;
@@ -63,7 +63,7 @@ for (int i=0; i <word.length(); i++)
                if (!wordState.contains('_')){
                    System.out.println(getHangman(wrongGuess));
                    System.out.println("you win");
-                   System.out.println( "the word was"+word);
+                   System.out.println( "the word was: "+word);
                    break;
                }
            }
