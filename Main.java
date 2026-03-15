@@ -12,6 +12,7 @@ for (int i=0; i <word.length(); i++)
 {
     WordState.add('_');
 }
+        System.out.println("Welcome to java hangman game!");
 sc.close();
     }
 }
