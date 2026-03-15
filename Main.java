@@ -36,18 +36,18 @@ public class Main {
 
 
         Scanner sc = new Scanner(System.in);
-        ArrayList<Character> WordState = new ArrayList<>();
+        ArrayList<Character> wordState = new ArrayList<>();
         int wrongGuess = 0 ;
 
 for (int i=0; i <word.length(); i++)
 {
-    WordState.add('_');
+    wordState.add('_');
 }
         System.out.println("Welcome to java hangman game!");
 
        while (wrongGuess<6){
            System.out.print("WORD: ");
-           for (char c: WordState){
+           for (char c: wordState){
                System.out.print(c +" ");
            }
            System.out.println();
@@ -57,10 +57,10 @@ for (int i=0; i <word.length(); i++)
                System.out.println("CORRECT\n");
                for(int i=0; i<word.length();i++){
                    if (word.charAt(i) == guess){
-                       WordState.set(i,guess);
+                       wordState.set(i,guess);
                    }
                }
-               if (!WordState.contains('_')){
+               if (!wordState.contains('_')){
                    System.out.println(getHangman(wrongGuess));
                    System.out.println("you win");
                    System.out.println( "the word was"+word);
@@ -81,8 +81,8 @@ for (int i=0; i <word.length(); i++)
 
 sc.close();
     }
-    static String getHangman(int wrongGuiess){
-        return switch (wrongGuiess){
+    static String getHangman(int wrongGuess){
+        return switch (wrongGuess){
             case 0 -> """
                     
                     """;
